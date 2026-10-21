@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f4f0">
+  <meta name="description" content="影像、图像与声音，一份个人创作作品集。">
+  <title>作品集 · 私人作品展</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="works.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#all-works">跳到全部作品</a>
+  <header class="site-header" id="top">
+    <h1><a href="#top">作品集<span class="signature-dot" aria-hidden="true">.</span></a></h1>
+    <nav aria-label="主导航">
+      <a href="#selected" class="nav-selected">精选</a>
+      <a href="#all-works">全部作品<span class="nav-count">13</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="selected" class="selected-section" aria-label="精选作品">
+      <div class="section-topline"><span>精选作品</span></div>
+      <div class="featured"></div>
+    </section>
+
+    <section id="all-works" class="all-section" aria-labelledby="all-heading">
+      <div class="collection-header">
+        <h2 id="all-heading">全部作品</h2>
+        <div class="filters" role="group" aria-label="按作品类型筛选">
+          <button type="button" data-filter="all" aria-pressed="true">全部 <span>13</span></button>
+          <button type="button" data-filter="video" aria-pressed="false">影像 <span>11</span></button>
+          <button type="button" data-filter="image" aria-pressed="false">图像 <span>1</span></button>
+          <button type="button" data-filter="audio" aria-pressed="false">声音 <span>1</span></button>
+        </div>
+      </div>
+      <p class="sr-only" id="filter-status" role="status"></p>
+      <div class="gallery"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>作品集<span class="signature-dot" aria-hidden="true">.</span></span>
+    <a href="#top">回到顶部 <span aria-hidden="true">↑</span></a>
+  </footer>
+
+  <dialog class="viewer" aria-labelledby="viewer-title">
+    <div class="viewer-panel">
+      <header class="viewer-header">
+        <div class="viewer-heading"><h2 id="viewer-title"></h2><p id="viewer-meta"></p></div>
+        <button type="button" class="icon-button close-button" data-close aria-label="关闭作品">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </header>
+      <div class="viewer-stage"></div>
+      <div class="media-error" role="alert" hidden>
+        <p>作品未能加载，请检查网络后重试。</p><button type="button" data-retry>重新加载</button>
+      </div>
+      <footer class="viewer-footer">
+        <button type="button" data-prev><span aria-hidden="true">←</span> 上一件</button>
+        <span class="viewer-position"></span>
+        <button type="button" data-next>下一件 <span aria-hidden="true">→</span></button>
+      </footer>
+    </div>
+  </dialog>
+  <noscript><p class="noscript-note">请启用浏览器的 JavaScript，以浏览与播放作品。</p></noscript>
+</body>
+</html>
