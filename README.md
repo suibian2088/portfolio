@@ -12,4 +12,4 @@
 - 查看器与筛选：`app.js`
 - 作品媒体与封面：`assets/`
 
-GitHub Pages 从 `main` 分支的根目录发布；提交更新后会自动部署。
+GitHub Pages 从 `gh-pages` 分支的根目录发布；提交更新后会自动部署。
